@@ -33,7 +33,7 @@ header{
     gap: 15px;
 }
 
-.add-button{
+#add-button{
     background-color: rgb(85, 161, 85);
     color: white;
     font-size: 18px;
@@ -42,7 +42,7 @@ header{
     border-radius: 4px;
 }
 
-.edit-button{
+#edit-button{
     background-color: #ffc107;
      color: white;
     font-size: 18px;
@@ -51,7 +51,7 @@ header{
     border-radius: 4px;
 }
 
-.delete-button{
+#delete-button{
     background-color: rgb(252, 32, 32);
     color: white;
     font-size: 18px;
@@ -60,7 +60,7 @@ header{
     border-radius: 4px;
 }
 
-.trash-button{
+#trash-button{
     background-color: rgb(255, 132, 0);
     color: white;
     font-size: 18px;
@@ -76,5 +76,3 @@ button:hover{
 .delete-button:hover{
   background-color: rgba(252, 32, 32, 0.793);
 }
-
-
