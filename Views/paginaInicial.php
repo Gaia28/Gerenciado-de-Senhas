@@ -1,18 +1,42 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION['email'])) {
+
+    header('Location: index.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../styles/stylePrincipal.css">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>pagina Inicial</title>
 
 </head>
-<header>
-    <h1>Bem vindo ao seu gerenciador de senhas</h1>
-</header>
+
+
 <body>
 
+    <header>
+    <div class="infoUser">
+        
+        <p> Olá <br> <i class = "fas fa-user"></i>
+            <?php echo $_SESSION['nome']; ?></p>
+    </div>
+        <h1>Bem vindo ao seu gerenciador de senhas</h1>
+    </header>
+
 <main class="container">
+
 
 <p class="message">Gerencia suas senhas de forma prática e segura</p>
 
@@ -23,7 +47,7 @@
             <button class="close-modal" data-modal="modal-1">X</button>
             <h2>Adicionar senha</h2>
 
-            <form method="post">
+            <form method="post" action="../controller/AdicionarSenha.php">
 
                 <label for="site">Nome do Site</label>
                 <input type="text" id="site" name="site" required>
