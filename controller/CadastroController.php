@@ -1,7 +1,6 @@
 <?php 
     
     require '../database/config.php';
-    require '../Views/telaCadastro.php';
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $nome = $_POST['nome'];

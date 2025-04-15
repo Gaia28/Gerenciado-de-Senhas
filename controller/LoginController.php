@@ -1,8 +1,7 @@
 <?php 
-    
-    require '../database/config.php';
-    require '../Views/index.php';
     session_start();
+    require '../database/config.php';
+    
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $email = $_POST['email'];
