@@ -17,8 +17,6 @@ Criar uma aplicação web simples e funcional que permita aos usuários:
 - **CSS**: estilização e layout da interface.
 - **MySQL**: armazenamento dos dados dos usuários e senhas.
 
-## 🗃️ Estrutura do Projeto
-
 
 ## Tela de Login
 ![Captura de tela 2025-04-11 205831](https://github.com/user-attachments/assets/cdab2a19-b064-4e7f-be24-a4c918c51a98)
