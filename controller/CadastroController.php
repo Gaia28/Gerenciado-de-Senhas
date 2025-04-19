@@ -8,6 +8,10 @@
         $senha = $_POST['senha'];
         $confirmarSenha = $_POST['confirmar-senha'];
 
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo "<script> alert('Formato de E-mail inválido'); </script>";
+        }
+
         if($senha !== $confirmarSenha){
             echo "<script> alert('As senhas não coincidem!');</script>";
         

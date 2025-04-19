@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 
-    $querySQL = 'INSERT INTO senhas (id_password, fk_userId, email, name_password) VALUES (?, ?, ?, ?)';
+    $querySQL = 'INSERT INTO senhas (password_add, fk_userId, email, name_password) VALUES (?, ?, ?, ?)';
 
     $preparedStatment = $connection->prepare($querySQL);
     $preparedStatment->bind_param('siss', $senha, $fk_userId, $usuario, $site);

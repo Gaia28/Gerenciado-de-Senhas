@@ -22,6 +22,7 @@
 
                 $_SESSION['email'] = $usuario['email_user'];
                 $_SESSION['nome'] = $usuario['name_user']; 
+                $_SESSION['id'] = $usuario['id_user'];
 
 
                 header('Location: ../Views/paginaInicial.php');

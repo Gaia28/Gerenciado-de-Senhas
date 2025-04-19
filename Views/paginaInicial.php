@@ -19,6 +19,7 @@ if(isset($_GET['logout'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/stylePrincipal.css">
+    <link rel="stylesheet" href="../styles/styleModal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Página Inicial</title>
 </head>
@@ -48,19 +49,20 @@ if(isset($_GET['logout'])) {
             <dialog id="modal-1">
                 <button class="close-modal" data-modal="modal-1">X</button>
                 <h2>Adicionar senha</h2>
-                
-                <form method="post" action="../controller/AdicionarSenha.php">
-                    <label for="site">Nome do Site</label>
-                    <input type="text" id="site" name="site" required>
-                    
-                    <label for="usuario">Usuário ou Email</label>
-                    <input type="text" id="usuario" name="usuario" required>
-                    
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
-                    
-                    <button type="submit">Adicionar</button>
-                </form>
+                <div id="modal-form">
+                    <form method="post" action="../controller/AdicionarSenha.php">
+                        <label for="site">Nome do Site</label>
+                        <input type="text" id="site" name="site" required>
+                        
+                        <label for="usuario">Usuário ou Email</label>
+                        <input type="text" id="usuario" name="usuario" required>
+                        
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" required>
+                        
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </div>
             </dialog>
             
             <button class="edit-button">Editar senha</button>
@@ -70,12 +72,14 @@ if(isset($_GET['logout'])) {
         
         <div class="password-list">
             <h2>Lista de senhas</h2>
-            <div class="password-item">
-                <p>Nome do site: Google</p>
-                <p>Senha: ********</p>
-                <p>Data de criação: 01/01/2023</p>
+            <div class="item">
+            <?php include '../controller/PassWordList.php'; ?>
+
             </div>
-        </div>
+            
+
+</div>
+
     </main>
     
     <script src="../interactions/scriptModal.js"></script>
