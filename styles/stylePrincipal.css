@@ -99,20 +99,36 @@ button:hover{
     display: flex;
     width: 70%;
     margin-top: 30px;
-    background-color: white;
+    background-color: white; 
     border: none;
     border-radius: 8px;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
     justify-content: center;
     gap: 10px;
-}
-.password-list .item{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
 
 }
+.password-item{
+    justify-content: center;
+    text-align: center;
+    background-color: #eeeeee;
+    font-size: 18px;
+    width: 60%;
+    padding: 8px;
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: rgba(87, 85, 85, 0.35) 0px 5px 15px;
+
+}
+.password-item:hover{
+    background-color: #dcdcdc;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: rgba(87, 85, 85, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+}
+
+
     
