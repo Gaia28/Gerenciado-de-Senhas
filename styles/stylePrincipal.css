@@ -18,6 +18,14 @@ header {
     text-align: center;
 
 }
+h1:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.message:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+}
 .logout{
     position: absolute;
     top: 25%;
@@ -90,6 +98,8 @@ header {
 button:hover{
     cursor: pointer;
     opacity: 0.8;
+    transform: scale(1.02);
+    transition: 0.3s;
 }
 .delete-button:hover{
   background-color: rgba(252, 32, 32, 0.793);
@@ -98,15 +108,19 @@ button:hover{
 .password-list{
     display: flex;
     width: 70%;
+    height: 400px;
     margin-top: 30px;
+    margin-bottom: 30px;
     background-color: white; 
     border: none;
     border-radius: 8px;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    justify-content: center;
+    justify-content: flex-start;
+
     gap: 10px;
+    overflow-y: auto;
 
 }
 .password-item{
@@ -114,7 +128,7 @@ button:hover{
     text-align: center;
     background-color: #eeeeee;
     font-size: 18px;
-    width: 60%;
+    width: 70%;
     padding: 8px;
     margin: 10px;
     border-bottom: 1px solid #ccc;

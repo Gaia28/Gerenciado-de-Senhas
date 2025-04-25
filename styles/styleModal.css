@@ -1,4 +1,4 @@
-dialog{
+dialog {
     width: 50%;
     max-width: 60%;
     border: none;
@@ -9,32 +9,39 @@ dialog{
     box-shadow: rgba(87, 85, 85, 0.35) 0px 5px 15px;
 }
 
-dialog h2{
+dialog h2 {
     font-size: 26px;
     margin-bottom: 20px;
     text-align: center;
-    
 }
 
-#modal-form{
+#modal-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#modal-form label{
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+#modal-form label {
     font-size: 18px;
     color: rgb(0, 0, 0);
 }
 
-#modal-form input{
+#modal-form input {
     width: 90%;
     padding: 8px;
     border: solid 1px #bbbbbb;
     border-radius: 4px;
+    font-size: 16px;
 }
 
-#modal-form button{
+#modal-form button {
     width: 50%;
     margin-top: 10px;
     padding: 10px;
@@ -43,6 +50,8 @@ dialog h2{
     border-radius: 4px;
     background-color: #007bff;
     color: white;
+    cursor: pointer;
+    align-self: center;
 }
 
 .close-modal {

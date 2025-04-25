@@ -8,12 +8,24 @@ openAddSenha.addEventListener('click', ()=>{
 
 });
 
-const closeModal = document.querySelector('.close-modal');
+const closeModal = document.querySelectorAll('.close-modal');
 
-closeModal.addEventListener('click', ()=>{
-    const modalId = closeModal.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-
-    modal.close();
+closeModal.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        const modalId = btn.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+    
+        modal.close();
+    });
 });
 
+
+const opneItemSenha = document.querySelectorAll('.password-item');
+opneItemSenha.forEach(item => {
+    item.addEventListener('click', () => {
+        const modalId = item.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+        modal.showModal();
+    });
+});
