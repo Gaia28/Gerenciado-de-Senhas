@@ -18,8 +18,14 @@ $result = $preparedStatment->get_result();
 if($result->num_rows > 0):
     while($row = $result->fetch_assoc()):
         $uniqueId = uniqid("modal_"); // ID único para cada modal
+        
 ?>
     <div class="password-item" data-modal="<?php echo $uniqueId; ?>">
+        
+            <img class="delete-button" src="../images/3844395_can_trash_icon.png" alt="Ícone de Senha" width="30" height="30">
+            </a>
+            <script src="../interactions/Buttons.js"></script>
+      
         <p>Nome do site: <?php echo htmlspecialchars($row['name_password']); ?></p>
         <p>Email/Usuário: <?php echo htmlspecialchars($row['email']); ?></p>
         <p>Senha: <?php echo htmlspecialchars($row['password_add']); ?></p>
@@ -39,4 +45,6 @@ endif;
 
 $preparedStatment->close();
 $connection->close();
+
 ?>
+

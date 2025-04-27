@@ -73,7 +73,7 @@ if(isset($_GET['logout'])) {
             </dialog>
             
             <button class="edit-button">Editar senha</button>
-            <button class="delete-button">Deletar senha</button>
+            
             <button class="trash-button">Lixeira</button>
         </div>
         
