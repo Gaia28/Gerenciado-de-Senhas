@@ -138,8 +138,15 @@ button:hover{
     width: 30px;
     height: 30px;
     margin-left: 90%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 .delete-button:hover{
     transform: scale(1.2);
     transition: 0.3s;
+} 
+.delete-button img {
+    display: block;
 }
