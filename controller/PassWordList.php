@@ -1,5 +1,6 @@
 <?php 
 require '../database/config.php';
+require '../criptografia/Criptografia.php';
 
 
 if(!isset($_SESSION['id'])) {
@@ -33,9 +34,9 @@ if($result->num_rows > 0):
 </form>
       
         <!-- Informações das senhas -->
-        <p>Nome do site: <?php echo htmlspecialchars($row['name_password']); ?></p>
-        <p>Email/Usuário: <?php echo htmlspecialchars($row['email']); ?></p>
-        <p>Senha: <?php echo htmlspecialchars($row['password_add']); ?></p>
+        <p> <strong>Nome do site:</strong> <?php echo htmlspecialchars($row['name_password']); ?></p>
+        <p><strong>Email/Usuário:</strong> <?php echo htmlspecialchars($row['email']); ?></p>
+        <p><strong>Senha:</strong> <?php echo "*********"; ?></p>
     </div>
 
     <!-- Modal -->
@@ -44,7 +45,8 @@ if($result->num_rows > 0):
         <button class="close-modal" data-modal="<?php echo $uniqueId; ?>">X</button>
         <h3><?php echo htmlspecialchars($row['name_password']); ?></h3>
         <p><strong>Usuário:</strong> <?php echo htmlspecialchars($row['email']); ?></p>
-        <p><strong>Senha:</strong> <?php echo htmlspecialchars($row['password_add']); ?></p>
+        <p><strong>Senha:</strong> <?php echo descriptografar($row['password_add']);
+ ?></p>
     </dialog>
 <?php
     endwhile;

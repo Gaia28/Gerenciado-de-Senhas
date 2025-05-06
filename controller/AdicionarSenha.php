@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require '../database/config.php';
+require '../criptografia/Criptografia.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $site = $_POST['site'];
@@ -19,11 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $fk_userId = $row['id_user'];
     }
 
-
     $querySQL = 'INSERT INTO senhas (password_add, fk_userId, email, name_password) VALUES (?, ?, ?, ?)';
 
+    $senhaCriptografada = criptografar($senha); // Criptografa a senha antes de armazená-la
+
     $preparedStatment = $connection->prepare($querySQL);
-    $preparedStatment->bind_param('siss', $senha, $fk_userId, $usuario, $site);
+    $preparedStatment->bind_param('siss', $senhaCriptografada, $fk_userId, $usuario, $site);
     
     if ($preparedStatment->execute()) {
         echo "<script>alert('Senha adicionada com sucesso!'); window.location.href='../views/paginaInicial.php';</script>";
