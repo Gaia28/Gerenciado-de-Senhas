@@ -12,9 +12,11 @@ body{
 header {
     display: flex;
     padding: 10px 20px;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     color: rgb(11, 114, 114);
     position: relative;
+    padding: 20px;
     text-align: center;
 
 }
